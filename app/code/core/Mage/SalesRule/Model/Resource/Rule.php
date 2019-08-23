@@ -244,7 +244,7 @@ class Mage_SalesRule_Model_Resource_Rule extends Mage_Rule_Model_Resource_Abstra
      * @param unknown_type $customerGroupId
      * @return mixed
      */
-    public function getActiveAttributes($websiteId, $customerGroupId)
+    public function getActiveAttributes()
     {
         $read = $this->_getReadAdapter();
         $select = $read->select()
