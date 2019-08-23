@@ -248,10 +248,7 @@ class Mage_SalesRule_Model_Observer
         $attributesTransfer = $observer->getEvent()->getAttributes();
 
         $attributes = Mage::getResourceModel('salesrule/rule')
-            ->getActiveAttributes(
-                Mage::app()->getWebsite()->getId(),
-                Mage::getSingleton('customer/session')->getCustomer()->getGroupId()
-            );
+            ->getActiveAttributes();
         $result = array();
         foreach ($attributes as $attribute) {
             $result[$attribute['attribute_code']] = true;
